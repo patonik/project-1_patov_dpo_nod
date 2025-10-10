@@ -68,7 +68,15 @@ quit or exit: Exit the game.
 
 ## Example Gameplay
 
-<script type="text/javascript" src="https://asciinema.org/a/HgbZC2EoLYQ5hsRzRmPadGyEZ" async></script>
+Here's a complete playthrough from launch to winning the treasure:
+
+<details>
+<summary>Click to play the recording</summary>
+
+<a title="Labyrinth of Treasures Demo" href="https://asciinema.org/a/HgbZC2EoLYQ5hsRzRmPadGyEZ?autoplay=1" target="_blank">
+<img src="https://asciinema.org/a/HgbZC2EoLYQ5hsRzRmPadGyEZ.svg" style="max-width:100%;" alt="asciicast" />
+</a>
+</details>
 
 ## Notes
 
