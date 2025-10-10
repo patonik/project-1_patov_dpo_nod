@@ -1,3 +1,7 @@
+EVENT_MODULO = 10
+
+EVENT_TYPE_MODULO = 3
+
 ROOMS = {
     'entrance': {
         'description': 'Вы в темном входе лабиринта. Стены покрыты мхом. '

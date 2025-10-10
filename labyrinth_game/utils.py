@@ -1,6 +1,8 @@
+import datetime
 import math
+import time
 
-from .constants import ROOMS
+from .constants import ROOMS, EVENT_MODULO, EVENT_TYPE_MODULO
 
 
 def get_input(prompt="> "):
@@ -30,7 +32,7 @@ def trigger_trap(game_state):
         inventory.pop(item_key)
         print(f"Вы потеряли предмет: {item_key}")
     else:
-        damage = pseudo_random(game_state['steps_taken'], 10)
+        damage = pseudo_random(game_state['steps_taken'], EVENT_MODULO)
         if damage < 3:
             print("Ловушка оказалась смертельной! Вы проиграли.")
             game_state['game_over'] = True
@@ -40,11 +42,11 @@ def trigger_trap(game_state):
 
 def random_event(game_state):
     """Trigger a random event during player movement."""
-    event_trigger = pseudo_random(game_state['steps_taken'], 10)
+    event_trigger = pseudo_random(game_state['steps_taken'], EVENT_MODULO)
     if event_trigger != 0:
         return  # No event occurs
 
-    event_type = pseudo_random(game_state['steps_taken'], 3)
+    event_type = pseudo_random(round(time.time()*1000), EVENT_TYPE_MODULO)
     current_room = game_state['current_room']
 
     match event_type:
