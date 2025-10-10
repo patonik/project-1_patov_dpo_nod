@@ -58,7 +58,7 @@ ROOMS = {
         'description': 'In the middle of the room rotten human remains cause'
                        ' repugnant stench. '
                        'You are terrified but try to explore the environment.',
-        'exits': {'north': 'dining_room', 'east': 'hall'},
+        'exits': {'north': 'dining_room', 'west': 'hall'},
         'items': ['skull', 'cobweb'],
         'puzzle': ('The levers should be activated in particular order. What is it?',
                    'red green blue')

@@ -23,6 +23,7 @@ def move_player(game_state, direction):
             return
         if current_room == "dining_room" and game_state['lab_puzzles'][current_room] is not None:
             print("The door seems to be blocked. Probably you need to solve the puzzle to unlock it...")
+            return
         if current_room.startswith("trap_room") and game_state['lab_puzzles'][current_room] is not None:
             trigger_trap(game_state)
             if game_state['game_over']:
@@ -32,6 +33,7 @@ def move_player(game_state, direction):
         if next_room == "treasure_room":
             print(
                 "Вы используете найденный ключ, чтобы открыть путь в комнату сокровищ.")
+            game_state
         describe_current_room(game_state)
         random_event(game_state)
     else:
@@ -71,6 +73,7 @@ def use_item(game_state, item_name):
             if "rusty_key" in game_state['player_inventory'].keys():
                 print('Prey! There is an inscription on the box\'s lid: ')
                 solve_riddle(game_state, RIDDLES['riddle_1'], 'bronze_box')
+                game_state['player_inventory'].pop('rusty_key')
             else:
                 print('You need a key to open it...')
         case _:
