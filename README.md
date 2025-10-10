@@ -12,22 +12,29 @@ The game is available as a `.whl` package on PyPI.
 Follow these steps to install and run it:
 
 1. Install Poetry (if not already installed):
+
    `sudo apt install python3-poetry`
 
 2. Ensure Poetry version is 1.8.4 or higher:
+
    `poetry --version`
 
 3. Create a New Project Directory:
-   `mkdir labyrinth_game
-   cd labyrinth_game`
+
+   `mkdir labyrinth_game`
+
+   `cd labyrinth_game`
 
 4. Initialize a Poetry Environment:
+
    `poetry init -n`
 
 5. Install the Game from PyPI:
+
    `poetry add labyrinth_game`
 
 6. Verify Installation:Check that the package is installed:
+
    `poetry show`
 
 ## Requirements
@@ -40,12 +47,15 @@ Follow these steps to install and run it:
 
 ## Usage
 
-Run the Game:Ensure you’re in the project directory with the Poetry environment
-activated. Use the Makefile to start the game:
-make project
+* **Run the Game**: Ensure you’re in the project directory 
+with the Poetry environment activated.
+* **Use the Makefile to start the game**:
+
+`make project`
 
 Alternatively, if the Makefile is not available, run:
-poetry run project
+
+`poetry run project`
 
 ## Gameplay:
 
@@ -55,16 +65,16 @@ Objective: Reach the treasure_room and open the treasure_chest to win.
 
 ## Available Commands:
 
-go <direction> or <direction> (e.g., north, go north): Move in the specified direction (
-north, south, east, west).
-look: Display the current room’s description, items, exits, and puzzle status.
-take <item>: Pick up an item from the room (e.g., take torch).
-use <item>: Use an item from your inventory (e.g., use torch).
-inventory: Show your current inventory.
-solve: Attempt to solve a puzzle in the current room or open the treasure chest in
-treasure_room.
-help: Display the list of available commands.
-quit or exit: Exit the game.
+* go <direction> or <direction> (e.g., north, go north): Move in the specified direction (
+* north, south, east, west).
+* look: Display the current room’s description, items, exits, and puzzle status.
+* take <item>: Pick up an item from the room (e.g., take torch).
+* use <item>: Use an item from your inventory (e.g., use torch).
+* inventory: Show your current inventory.
+* solve: Attempt to solve a puzzle in the current room or open the treasure chest in
+* treasure_room.
+* help: Display the list of available commands.
+* quit or exit: Exit the game.
 
 ## Example Gameplay
 
@@ -80,15 +90,12 @@ Here's a complete playthrough from launch to winning the treasure:
 
 ## Notes
 
-**Random Events**: Moving may trigger random events like finding a coin, hearing a
-scare, or
-activating a trap in trap_room (if you lack a torch).
-**Puzzles**: Some rooms (e.g., hall, library, trap_room) have puzzles. Correct answers
-yield
-rewards like treasure_key or coin.
-**Treasure Room**: Requires rusty_key to open bronze_box
-and magic treasure_key to enter treasure_room and open treasure_chest
-(or a correct code).
+* **Random Events**: Moving may trigger random events like finding a coin, hearing a
+scare, or activating a trap in trap_room (if you lack a torch).
+* **Puzzles**: Some rooms (e.g., hall, library, trap_room) have puzzles. Correct answers
+yield rewards like treasure_key or coin.
+* **Treasure Room**: Requires rusty_key to open bronze_box
+and magic treasure_key to enter treasure_room and open treasure_chest (or a correct code).
 
 **Author**: patonik
 
