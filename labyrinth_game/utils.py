@@ -80,7 +80,8 @@ def describe_current_room(game_state):
 
     if game_state['lab_puzzles'][current_room] is not None:
         if current_room == 'trap_room_2':
-            if 'torch' in game_state['player_inventory'].keys() and game_state['player_inventory']['torch'] == 'on':
+            if 'torch' in game_state['player_inventory'].keys() and \
+                    game_state['player_inventory']['torch'] == 'on':
                 print('You light the surroundings with your torch '
                       'and can see levers on the pillars of green, red, '
                       'and blue colors.')

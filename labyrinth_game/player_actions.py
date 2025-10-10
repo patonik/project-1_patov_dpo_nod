@@ -1,4 +1,4 @@
-from .constants import ROOMS, RIDDLES
+from .constants import RIDDLES, ROOMS
 from .utils import describe_current_room, random_event, solve_riddle, trigger_trap
 
 
@@ -21,10 +21,14 @@ def move_player(game_state, direction):
                 and "treasure_key" not in game_state['player_inventory'].keys()):
             print("Дверь заперта. Нужен ключ, чтобы пройти дальше.")
             return
-        if current_room == "dining_room" and game_state['lab_puzzles'][current_room] is not None:
-            print("The door seems to be blocked. Probably you need to solve the puzzle to unlock it...")
+        if current_room == "dining_room" and game_state['lab_puzzles'][
+            current_room] is not None:
+            print(
+                "The door seems to be blocked. "
+                "Probably you need to solve the puzzle to unlock it...")
             return
-        if current_room.startswith("trap_room") and game_state['lab_puzzles'][current_room] is not None:
+        if current_room.startswith("trap_room") and game_state['lab_puzzles'][
+            current_room] is not None:
             trigger_trap(game_state)
             if game_state['game_over']:
                 return

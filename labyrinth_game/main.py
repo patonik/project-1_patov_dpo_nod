@@ -72,7 +72,8 @@ def populate_state(rooms: dict, parameter: str) -> dict:
     """Populates game state with labyrinth rooms' parameters."""
     i_dict = {}
     for room in rooms.keys():
-        i_dict[room] = ROOMS[room][parameter][:] if ROOMS[room][parameter] is not None else None
+        i_dict[room] = ROOMS[room][parameter][:] if ROOMS[room][parameter] is not None \
+            else None
     return i_dict
 
 
